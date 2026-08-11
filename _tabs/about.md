@@ -1,3 +1,9 @@
+---
+title: Sobre mí
+icon: fas fa-user
+order: 1
+---
+
 # Hola, soy Andrés Arias 👋
 
 Soy Solution Architect especializado en Microsoft Dynamics 365 Business Central, Power Platform, Copilot e Inteligencia Artificial aplicada a las aplicaciones de negocio.
