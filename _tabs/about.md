@@ -1,15 +1,3 @@
----
-# the default layout is 'page'
-icon: fas fa-info-circle
-order: 4
----
-title: Sobre mí
-
-icon: fas fa-user
-
-order: 1
----
-
 # Hola, soy Andrés Arias 👋
 
 Soy Solution Architect especializado en Microsoft Dynamics 365 Business Central, Power Platform, Copilot e Inteligencia Artificial aplicada a las aplicaciones de negocio.
@@ -69,8 +57,4 @@ Además, dedico parte de mi tiempo a crear contenido, realizar demostraciones y 
 Espero que encuentres ideas, inspiración y contenido útil para tus proyectos.
 
 Si alguno de los artículos te resulta interesante o quieres intercambiar experiencias sobre Business Central, Copilot o Inteligencia Artificial, será un gusto conectar contigo.
-`
 
-
-> Add Markdown syntax content to file `_tabs/about.md`{: .filepath } and it will show up on this page.
-{: .prompt-tip }
