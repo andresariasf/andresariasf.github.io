@@ -1,0 +1,16 @@
+tabs:
+home: Inicio
+about: Sobre mí
+categories: Categorías
+tags: Etiquetas
+archives: Archivo
+ 
+search:
+hint: Buscar
+cancel: Cancelar
+no_results: No se encontraron resultados
+
+layout:
+post: Publicación
+category: Categoría
+tag: Etiqueta
