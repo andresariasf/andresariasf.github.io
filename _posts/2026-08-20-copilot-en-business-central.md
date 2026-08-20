@@ -1,5 +1,5 @@
 ---
-title: Copilot en Business Central: ¿Qué puede hacer hoy y qué esperar para el futuro?
+title: "Copilot en Business Central: ¿Qué puede hacer hoy y qué esperar para el futuro?"
 date: 2026-08-20 08:00:00 -0500
 categories: [Business Central, Copilot]
 tags: [business-central, copilot, ai, dynamics365]
