@@ -1,11 +1,12 @@
 ---
 title: Copilot en Business Central ¿Qué puede hacer hoy y qué esperar para el futuro?
-date: 2026-08-20 
+date: 2026-08-20 09:00:00 -0500 
 categories: [Business Central, Copilot]
 tags: [business-central, copilot, ai, dynamics365]
 description: Descubre las capacidades actuales de Copilot en Business Central, los escenarios donde aporta valor y cómo está cambiando la forma de trabajar con el ERP.
-image: /assets/img/posts/copilot-business-central.png
-alt: Copilot en Business Central
+image:
+  path: /assets/img/posts/copilot-business-central.png
+  alt: "Copilot en Business Central"
 ---
 
 # Copilot en Business Central: ¿Qué puede hacer hoy y qué esperar para el futuro?
