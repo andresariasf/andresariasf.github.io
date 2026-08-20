@@ -4,8 +4,7 @@ date: 2026-08-20
 categories: [Business Central, Copilot]
 tags: [business-central, copilot, ai, dynamics365]
 description: Descubre las capacidades actuales de Copilot en Business Central, los escenarios donde aporta valor y cómo está cambiando la forma de trabajar con el ERP.
-image:
-path: /assets/img/posts/copilot-business-central.png
+image: /assets/img/posts/copilot-business-central.png
 alt: Copilot en Business Central
 ---
 
