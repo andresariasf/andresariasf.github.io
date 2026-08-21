@@ -258,6 +258,7 @@ Las propuestas se muestran para revisión y el usuario puede conservarlas, modif
 Desde una perspectiva funcional, esto es fundamental. En un ERP, la automatización debe reducir trabajo sin perder trazabilidad ni control.
 
 > Esta capacidad puede estar sujeta a versión, idioma, región y estado preliminar. Conviene validar su disponibilidad en cada ambiente antes de incluirla dentro del diseño definitivo del proceso.
+{: .prompt-tip }
 
 ## 8. Sugerir artículos sustitutos
 
