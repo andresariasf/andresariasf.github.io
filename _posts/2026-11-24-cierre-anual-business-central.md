@@ -199,4 +199,388 @@ Diferencia                    5.000
 
 Y entonces empieza el entretenido trabajo de descubrir de dónde vienen esos 5.000.
 
-Por 
+Por eso merece la pena revisar la configuración de **Direct Posting** y comprobar que las cuentas de control se utilizan de acuerdo con el diseño contable definido para la empresa.
+
+No esperaría al 31 de diciembre para hacer esta validación.
+
+---
+
+## 8. Conciliaciones bancarias
+
+Cada banco debería estar conciliado contra su correspondiente extracto.
+
+Revisaría especialmente:
+
+- Comisiones.
+- Intereses.
+- Transferencias en tránsito.
+- Pagos todavía no aplicados.
+- Cobros pendientes.
+- Movimientos existentes en el banco pero todavía no registrados.
+
+El objetivo debería ser:
+
+> **Extracto bancario = Banco en Business Central = Contabilidad**
+{: .prompt-info }
+
+Si no coinciden, debemos poder explicar la diferencia.
+
+---
+
+## 9. Inventario: uno de los puntos más críticos
+
+Si nuestra empresa trabaja con inventario, aquí debemos detenernos un poco más.
+
+Antes de cerrar revisaría:
+
+- Inventario físico.
+- Diferencias de inventario.
+- Inventario negativo.
+- Productos sin coste.
+- Recepciones pendientes.
+- Envíos pendientes.
+- Transferencias.
+- Costes indirectos.
+- Aplicaciones de movimientos.
+- Movimientos pendientes de ajustar.
+
+Después debemos ejecutar los procesos de coste correspondientes.
+
+### Ajustar coste - Movimientos producto
+
+Primero debemos asegurarnos de que los costes están correctamente propagados entre los movimientos relacionados.
+
+Después ejecutaremos:
+
+### Registrar coste inventario en contabilidad
+
+Esto permite trasladar hacia contabilidad las diferencias de coste pendientes.
+
+Una secuencia práctica sería:
+
+```text
+Movimientos
+     ↓
+Inventario físico
+     ↓
+Ajuste de diferencias
+     ↓
+Adjust Cost - Item Entries
+     ↓
+Post Inventory Cost to G/L
+     ↓
+Inventory Valuation
+     ↓
+Conciliación Inventory vs G/L
+```
+
+El orden es importante. No queremos reconciliar el inventario para modificar sus costes inmediatamente después.
+
+---
+
+## 10. Si tenemos producción, todavía no hemos terminado
+
+Si utilizamos Manufacturing, revisaría además:
+
+- Órdenes de producción abiertas.
+- Consumos pendientes.
+- Outputs pendientes.
+- Capacidades.
+- Tiempos.
+- Órdenes terminadas pero todavía abiertas.
+- WIP.
+- Desviaciones de producción.
+
+Esto es especialmente importante antes del ajuste definitivo de costes.
+
+Un consumo, una capacidad o un output pendiente puede terminar modificando el coste del producto que creíamos cerrado.
+
+Por ello, finalizaría primero los movimientos operativos que correspondan y después continuaría con el ajuste definitivo de costes.
+
+---
+
+## 11. Ejecutar la depreciación de activos fijos
+
+Este era otro punto de mi checklist original.
+
+Si utilizamos **Activos fijos**, debemos revisar:
+
+- Altas.
+- Bajas.
+- Adquisiciones.
+- Mantenimiento.
+- Libros de amortización.
+- Activos totalmente amortizados.
+- Activos que deberían haberse dado de baja.
+
+Después ejecutaremos **Calcular amortización** hasta la fecha final correspondiente y registraremos los movimientos generados.
+
+---
+
+## 12. Ajustar tipos de cambio
+
+Otro proceso que dependerá de nuestra empresa.
+
+Si tenemos operaciones en moneda extranjera debemos revisar primero nuestros **Tipos de cambio divisa**.
+
+Después podremos ejecutar **Ajustar tipos de cambio**, prestando especial atención a movimientos abiertos de:
+
+- Clientes.
+- Proveedores.
+- Bancos.
+
+Antes de registrar el ajuste conviene comprobar la fecha, los tipos de cambio utilizados y las cuentas configuradas para las pérdidas y ganancias por diferencias de cambio.
+
+---
+
+## 13. Provisiones, periodificaciones y otros ajustes
+
+No todo llegará a través de una factura.
+
+Tenemos que considerar posibles:
+
+- Provisiones.
+- Gastos devengados.
+- Ingresos devengados.
+- Gastos anticipados.
+- Deterioros.
+- Reclasificaciones.
+- Ajustes identificados durante las conciliaciones.
+- Ajustes de auditoría.
+
+El objetivo es que los ingresos y gastos queden reconocidos en el ejercicio que realmente corresponde.
+
+---
+
+## 14. Revisar dimensiones
+
+Este es un punto que añadiría expresamente a mi checklist actual.
+
+Quizás nuestro Balance y Estado de Resultados sean correctos, pero ¿qué ocurre con nuestro análisis?
+
+Revisaría las dimensiones importantes para la empresa, por ejemplo:
+
+- Departamento.
+- Centro de coste.
+- Proyecto.
+- Sucursal.
+- Oficina.
+- País.
+- Línea de negocio.
+
+Especialmente buscaría movimientos **sin dimensión, con dimensiones incorrectas o con combinaciones no esperadas**.
+
+En mi experiencia, descubrir esto después de presentar los informes de gestión es bastante peor que detectarlo durante el cierre.
+
+---
+
+## 15. Ejecutar los informes antes de cerrar
+
+Antes de utilizar **Cerrar año**, guardaría una fotografía financiera de cómo estamos llegando al cierre.
+
+Como mínimo revisaría:
+
+- Balance de comprobación.
+- Balance de situación.
+- Estado de resultados.
+- Antigüedad de clientes.
+- Antigüedad de proveedores.
+- Saldos bancarios.
+- Valoración de inventario.
+- Conciliación Inventory - G/L.
+- Activos fijos.
+- Análisis por dimensiones.
+
+Y comprobaría nuevamente:
+
+```text
+AR           ↔ G/L
+AP           ↔ G/L
+Banks        ↔ G/L
+Inventory    ↔ G/L
+Fixed Assets ↔ G/L
+```
+
+No es suficiente con que el balance cuadre. Los submódulos deben explicar el saldo de sus correspondientes cuentas de control.
+
+---
+
+## 16. Antes de cerrar: ¿por qué no probarlo en Sandbox?
+
+Esta es una recomendación que considero especialmente útil.
+
+Si:
+
+- Es nuestro primer cierre en Business Central.
+- Acabamos de implementar la solución.
+- Hemos modificado Posting Groups.
+- Cambiamos nuestro Chart of Accounts.
+- Tenemos personalizaciones relacionadas con contabilidad.
+- Nunca hemos ejecutado **Close Income Statement**.
+
+haría primero una prueba en **Sandbox**.
+
+Esto nos permite comprobar:
+
+- Qué movimientos genera el cierre.
+- Qué cuenta recibe el resultado.
+- Cómo se comportan nuestras dimensiones.
+- El impacto de nuestras personalizaciones.
+- Los informes posteriores al cierre.
+
+> Personalmente, prefiero descubrir una sorpresa en Sandbox que durante el cierre real.
+{: .prompt-tip }
+
+---
+
+## 17. Ahora sí: cerrar el ejercicio
+
+Una vez conciliados y aprobados nuestros números podemos ejecutar:
+
+**Periodos contables → Cerrar año**
+
+Debemos tener clara una característica importante:
+
+> **Una vez cerrado el ejercicio, no podemos volver a abrirlo mediante la funcionalidad estándar.**
+{: .prompt-warning }
+
+Por eso no deberíamos ejecutar este paso hasta haber terminado nuestras validaciones.
+
+Cerrar el ejercicio tampoco significa que automáticamente hayamos bloqueado toda contabilización posterior. Para ello debemos seguir controlando las fechas permitidas de registro.
+
+---
+
+## 18. Asiento de regularización: Close Income Statement
+
+Este era otro de los procesos incluidos en mi lista original.
+
+Cerrar el ejercicio y cerrar el Estado de Resultados **no son lo mismo**.
+
+Después del cierre debemos ejecutar:
+
+**Cerrar estado de resultados / Close Income Statement**
+
+El proceso toma las cuentas configuradas como **Income Statement** y genera los movimientos necesarios para cancelar sus saldos y trasladar el resultado a la cuenta correspondiente de patrimonio.
+
+La secuencia sería:
+
+```text
+Cerrar ejercicio
+        ↓
+Close Income Statement
+        ↓
+Generación del diario
+        ↓
+REVISAR
+        ↓
+Registrar
+```
+
+He puesto **REVISAR** en mayúsculas por una razón.
+
+No registraría el diario sin validar previamente:
+
+- Cuenta de resultados acumulados.
+- Importes.
+- Dimensiones.
+- Fecha.
+- Número de documento.
+
+---
+
+## 19. ¿Qué ocurre si Auditoría solicita un ajuste?
+
+Puede ocurrir que Auditoría solicite un ajuste correspondiente al ejercicio anterior cuando ya hemos ejecutado **Cerrar año**.
+
+Cerrar el ejercicio no significa necesariamente que sea imposible registrar un ajuste con fecha del año anterior. Si las fechas permitidas de registro lo permiten, determinados usuarios pueden contabilizar dichos ajustes.
+
+Después tendremos que volver a ejecutar **Close Income Statement** para trasladar también el impacto del nuevo movimiento.
+
+Por tanto:
+
+> **Cerrar año no significa bloquear año.**
+{: .prompt-info }
+
+Una vez terminados los ajustes de auditoría, sí recomendaría restringir definitivamente las fechas permitidas de registro.
+
+---
+
+## Mi checklist final de cierre anual
+
+Después de unir mi lista original con estas recomendaciones, este sería actualmente mi checklist.
+
+### Preparar el nuevo año
+
+- [ ] Revisar **Series numéricas**.
+- [ ] Crear el nuevo **Ejercicio contable**.
+- [ ] Revisar **Periodos inventario**.
+- [ ] Revisar **Fechas permitidas de registro**.
+- [ ] Actualizar **Listas de precios**.
+- [ ] Revisar configuraciones con vigencia por fecha.
+
+### Preparar el cierre
+
+- [ ] Registrar documentos pendientes.
+- [ ] Conciliar clientes.
+- [ ] Conciliar proveedores.
+- [ ] Conciliar bancos.
+- [ ] Revisar cuentas de control y **Direct Posting**.
+- [ ] Realizar inventario físico.
+- [ ] Revisar inventario negativo.
+- [ ] Revisar órdenes de producción y WIP.
+- [ ] Ejecutar **Adjust Cost - Item Entries**.
+- [ ] Ejecutar **Post Inventory Cost to G/L**.
+- [ ] Conciliar Inventory vs G/L.
+- [ ] Calcular depreciaciones.
+- [ ] Ajustar tipos de cambio.
+- [ ] Registrar provisiones y periodificaciones.
+- [ ] Revisar dimensiones.
+- [ ] Generar y revisar los informes financieros.
+
+### Ejecutar el cierre
+
+- [ ] Realizar una prueba en **Sandbox**, cuando aplique.
+- [ ] Obtener la aprobación financiera.
+- [ ] Ejecutar **Cerrar año**.
+- [ ] Ejecutar **Close Income Statement**.
+- [ ] Revisar el diario generado.
+- [ ] Registrar el asiento.
+- [ ] Registrar posibles ajustes de auditoría.
+- [ ] Reejecutar el cierre de resultados si hubo ajustes.
+- [ ] Restringir definitivamente las fechas de registro.
+- [ ] Archivar los informes utilizados para validar el cierre.
+
+---
+
+## Para terminar
+
+Cuando escribí aquella primera lista para mi equipo tenía apenas unos cuantos puntos.
+
+Y en realidad me sigue gustando aquella idea porque resume bastante bien cómo deberíamos afrontar un cierre anual en Business Central:
+
+**no esperar al último día para descubrir lo que nos faltaba preparar.**
+
+El cierre anual no comienza cuando hacemos clic en **Cerrar año**.
+
+Comienza bastante antes revisando nuestras series, periodos, fechas, documentos pendientes, conciliaciones, inventario, costes, activos, divisas y dimensiones.
+
+Si tuviera que resumir todo este artículo en una sola secuencia sería:
+
+> **Preparar → Registrar → Conciliar → Ajustar → Validar → Cerrar → Bloquear**
+{: .prompt-tip }
+
+Seguramente cada empresa añadirá algunos puntos más a esta lista dependiendo de sus procesos, industria y localización.
+
+**¿Qué otro punto añadirías tú a este checklist de cierre anual en Business Central?**
+
+---
+
+## Referencias
+
+Para preparar y actualizar este checklist he contrastado mi experiencia con documentación oficial de Microsoft y distintas guías especializadas sobre cierres de ejercicio en Business Central:
+
+- [Close Years and Periods - Microsoft Learn](https://learn.microsoft.com/en-us/dynamics365/business-central/year-close-years-periods)
+- [Close the Books - Microsoft Learn](https://learn.microsoft.com/en-us/dynamics365/business-central/year-close-books)
+- [Business Central Year-End Close Checklist - ERP Software Blog](https://erpsoftwareblog.com/2026/11/business-central-year-end-close-checklist/)
+- [How to Close a Fiscal Year in Business Central - Forvis Mazars](https://www.forvismazars.us/forsights/2025/11/how-to-close-a-fiscal-year-in-business-central)
+- [Year-End ERP Checklist for Dynamics Business Central - HBS](https://www.hbs.net/blog/erp-year-end-prep-dynamics-business-central)
