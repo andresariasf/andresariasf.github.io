@@ -14,11 +14,10 @@ Se acerca el cierre del año y con él uno de los procesos más importantes para
 
 Cuando trabajamos con Microsoft Dynamics 365 Business Central, es fácil pensar que el cierre consiste simplemente en cerrar los periodos contables y ejecutar el proceso de cierre del estado de resultados. Sin embargo, hay varias actividades que deberíamos completar antes de llegar a ese punto.
 
-Clientes, proveedores, bancos, inventario, activos fijos, divisas e incluso producción pueden tener impacto directo sobre nuestro resultado.
-
 En este artículo quiero compartir un recorrido práctico por los principales puntos que deberíamos revisar antes de cerrar nuestro ejercicio en Business Central.
 
 Antes de empezar: el cierre es un proceso, no un botón
+
 Una de las primeras cosas que debemos tener claras es que cerrar el ejercicio fiscal y cerrar las cuentas de resultados son dos procesos diferentes.
 
 Además, cerrar un ejercicio en Business Central no impide automáticamente que podamos registrar movimientos con fechas pertenecientes a ese año. Para controlar esto debemos utilizar las restricciones de fechas de registro.
