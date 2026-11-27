@@ -15,11 +15,10 @@ timezone: America/Lima
 
 title: Andrés Arias # the main title
 
-tagline: Business Central, Copilot e IA aplicada # it will display as the subtitle
+tagline: Microsoft Dynamics Business Central, Copilot, AI & Microsoft Business Applications # it will display as the subtitle
 
 description: >- # used by seo meta and the atom feed
-  Un espacio para compartir experiencias, demostraciones y aprendizajes sobre Business Central, Copilot, Power Platform e Inteligencia Artificial aplicada a los negocios.
-
+  Artículos, guías y experiencias prácticas sobre Microsoft Dynamics 365 Business Central, Copilot, AI, Microsoft Fabric y Power Platform.
 # Fill in the protocol & hostname for your site.
 # E.g. 'https://username.github.io', note that it does not end with a '/'.
 url: "https://andresariasf.github.io"
@@ -37,9 +36,10 @@ social:
   email: andres_af_4@hotmail.com # change to your email address
   fediverse_handle: # fill in your fediverse handle. E.g. "@username@domain.com"
   links:
+  
     # The first element serves as the copyright owner's link
     - https://twitter.com/username # change to your Twitter homepage
-    - https://github.com/username # change to your GitHub homepage
+    - https://github.com/andresariasf # change to your GitHub homepage
     # Uncomment below to add more social links
     # - https://www.facebook.com/username
     # - https://www.linkedin.com/in/username
