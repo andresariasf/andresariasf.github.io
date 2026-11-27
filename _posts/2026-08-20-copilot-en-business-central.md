@@ -1,12 +1,12 @@
 ---
-title: "Copilot en Business Central: qué puede hacer hoy y cómo empezar a aprovecharlo"
+title: "Copilot en Business Central: qué puede hacer y cómo aprovecharlo"
 date: 2026-08-20 09:00:00 -0500 
 categories: [Business Central, Copilot]
 tags: [business-central, copilot, ai, dynamics365]
-description: Una mirada funcional y práctica a las principales capacidades de Copilot en Business Central, con ejemplos de ventas, finanzas, inventario y análisis de información.
+description: Descubre qué puede hacer Copilot en Microsoft Dynamics 365 Business Central con ejemplos prácticos de ventas, finanzas, inventario, análisis de datos y agentes.
 image:
   path: /assets/img/posts/copilot-business-central.png
-  alt: "Copilot en Business Central"
+  alt: "Copilot en Microsoft Dynamics 365 Business Central"
 ---
 
 Cuando hablamos de Inteligencia Artificial aplicada a un ERP, es fácil imaginar un sistema capaz de resolverlo todo con una sola pregunta.
@@ -15,7 +15,7 @@ La realidad actual es más concreta y, para mí, también más interesante.
 
 Copilot en Business Central no busca reemplazar el proceso de negocio ni tomar todas las decisiones por el usuario. Su objetivo es ayudar a consultar información, analizar datos, completar tareas y reducir parte del trabajo manual que normalmente realizamos dentro del sistema.
 
-Esto cambia poco a poco la forma de trabajar con Business Central.
+Esto cambia poco a poco la forma de trabajar con Dynamics Business Central.
 
 Ya no se trata únicamente de conocer dónde está cada página, qué filtro utilizar o qué campo completar. También podemos apoyarnos en Copilot para encontrar información, organizar datos, generar propuestas y avanzar más rápido dentro de un proceso.
 
